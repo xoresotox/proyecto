@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pagina 1</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body style="text-align: center;">
+        <h2 class="titulo">DuduyBubu.com</h2>
+        <form action="https://www.google.com/search" method="get">
+            <label for="Busqueda" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Ingrese busqueda:</label>
+            <input type="text" name="q" id="Busqueda" placeholder="Escriba aqui" value="" required><br>
+            <br>
+            <button type="submit" class="button-circle">Ingrese</button> 
+            <button type="reset" class="button-circle">Limpiar</button> 
+        </form>
+    </body>
+</html>
