@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pagina 3</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h2 class="titulo" style="text-align: center;">DuduyBubu.com/Busqueda avanzada</h2>
+        <div style="text-align: center;">
+            <button type="button" class="conect-button" onclick="window.location.href='/image_search'">Ir a busqueda de imagenes</button>
+            <button type="button" class="conect-button" style="margin-left: 4%" onclick="window.location.href='/'">Realizar una busqueda normal</button>
+            <button type="button" class="conect-button" style="margin-left: 4%;">Ir a busqueda Avanzada</button>
+        </div><br>
+        <div style="margin-left: 10%;">
+            <form action="/advanced_search" method="post">
+                <label for="Busqueda_completa" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Todas estas palabras:</label>
+                <input type="text" name="all_words" id="Busqueda_completa" placeholder="Palabras completas" value="" required><br>
+                <br>
+                <label for="palabra_exacta" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Esta palabra o frase exacta:</label>
+                <input type="text" name="exact_phrase" id="palabra_exacta" placeholder="Palabra exacta" value="" required><br>
+                <br>
+                <label for="Ninguna_palabra" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Ninguna de estas palabras:</label>
+                <input type="text" name="none_words" id="Ninguna_palabra" placeholder="Ninguna de estas..." value="" required>
+                <div style="margin-left: 70%; margin-top: -5%;">
+                    <button type="submit" class="advanced_button">Ingrese</button> 
+                    <button type="reset" class="advanced_button">Limpiar</button> 
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
