@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pagina 2</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h2 class="titulo" style="text-align: center;">DuduyBubu.com/imagenes</h2>
+        <div style="text-align: center;">
+            <button type="button" class="conect-button" style="margin-left: 4%;">Ir a busqueda de imagenes</button>
+            <button type="button" class="conect-button" style="margin-left: 4%" onclick="window.location.href='/'">Realizar una busqueda normal</button>
+            <button type="button" class="conect-button" style="margin-left: 4%" onclick="window.location.href='/advanced_search'">Ir a busqueda Avanzada</button>
+        </div><br>
+        <div style="text-align: center;">
+            <form action="https://www.google.com/search" method="get">
+                <input type="hidden" name="tbm" value="isch">
+                <label for="Busqueda" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Ingrese imagen a buscar:</label>
+                <input type="text" name="q" id="Busqueda" placeholder="Escriba aqui" value="" required><br>
+                <br>
+                <button type="submit" class="button-circle">Ingrese</button> 
+                <button type="reset" class="button-circle">Limpiar</button> 
+            </form>
+        </div>
+    </body>
+</html>
